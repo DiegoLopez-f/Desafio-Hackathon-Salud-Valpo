@@ -102,12 +102,23 @@ def predict(data: PredictionInput):
             probability = float(max(proba))
 
         # Convertir a tipo Python nativo
+        # - Si es ndarray -> lista
+        # - Si es un numpy scalar (np.int64, np.float32, etc.) -> .item() para obtener tipo nativo
+        # - Si ya es un tipo nativo (int/float/str/bool) lo dejamos o casteamos explícitamente
         if isinstance(prediction, np.ndarray):
             prediction = prediction.tolist()
-        elif isinstance(prediction, (np.int32, np.int64)):
-            prediction = int(prediction)
-        elif isinstance(prediction, (np.float32, np.float64)):
-            prediction = float(prediction)
+        elif isinstance(prediction, np.generic):
+            # numpy scalar -> Python scalar
+            prediction = prediction.item()
+        elif isinstance(prediction, (int, float, str, bool)):
+            # ya es tipo nativo; asegurar el casting correcto para ints/floats
+            if isinstance(prediction, int):
+                prediction = int(prediction)
+            elif isinstance(prediction, float):
+                prediction = float(prediction)
+        else:
+            # Fallback: dejar tal cual o intentar convertir si es necesario
+            pass
 
         return {
             "prediction": prediction,
