@@ -1,100 +1,100 @@
 /* Fondo oscuro (Overlay) */
 .overlay {
-    position: fixed;
-    inset: 0; /* Cubre toda la pantalla */
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 100;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 100;
 }
 .overlay.open {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Panel Lateral */
 .panel {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 280px;
-    background-color: #ffffff;
-    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
-    z-index: 101;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 280px;
+  background-color: #ffffff;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+  z-index: 101;
 
-    /* Animación de entrada/salida */
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
+  /* Animación de entrada/salida */
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 
-    /* Estructura interna */
-    display: flex;
-    flex-direction: column;
+  /* Estructura interna */
+  display: flex;
+  flex-direction: column;
 }
 .panel.open {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
 }
 .header h3 {
-    margin: 0;
-    font-size: 1.25rem;
+  margin: 0;
+  font-size: 1.25rem;
 }
 .closeButton {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    line-height: 1;
-    color: #888;
-    cursor: pointer;
-    padding: 0;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: #888;
+  cursor: pointer;
+  padding: 0;
 }
 
 /* Navegación (links) */
 .navLinks {
-    flex-grow: 1; /* Ocupa el espacio disponible */
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1rem;
 }
 .navLinks a {
-    color: #333;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.75rem 1rem;
-    border-radius: 6px;
-    transition: background-color 0.2s ease;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 .navLinks a:hover {
-    background-color: #f4f4f4;
+  background-color: #f4f4f4;
 }
 
-/* Pie del panel (botón de logout) */
+/* Pie del panel botón de logout */
 .footer {
-    padding: 1.5rem;
-    border-top: 1px solid #f0f0f0;
+  padding: 1.5rem;
+  border-top: 1px solid #f0f0f0;
 }
 .logoutButton {
-    width: 100%;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 6px;
-    background-color: #dc3545;
-    color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 .logoutButton:hover {
-    background-color: #c82333;
+  background-color: #c82333;
 }

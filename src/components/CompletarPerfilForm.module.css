@@ -1,64 +1,64 @@
 .formContainer {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
 }
 
 .formContainer h2 {
-    margin-top: 0;
-    color: #333;
+  margin-top: 0;
+  color: #333;
 }
 .formContainer p {
-    color: #555;
-    margin-bottom: 1.5rem;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
 .form {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .inputGroup {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .inputGroup label {
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #555;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
 }
 .inputGroup input {
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 /* El botón ocupa las dos columnas */
 .saveButton {
-    grid-column: 1 / -1; /* Ocupa todo el ancho */
-    padding: 0.85rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 1rem;
+  grid-column: 1 / -1;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 .saveButton:disabled {
-    background-color: #a0cffc;
-    cursor: not-allowed;
+  background-color: #a0cffc;
+  cursor: not-allowed;
 }
 
 .errorText {
-    grid-column: 1 / -1;
-    color: #D8000C;
-    background-color: #FFD2D2;
-    padding: 0.75rem;
-    border-radius: 5px;
-    text-align: center;
+  grid-column: 1 / -1;
+  color: #d8000c;
+  background-color: #ffd2d2;
+  padding: 0.75rem;
+  border-radius: 5px;
+  text-align: center;
 }
