@@ -1,3 +1,12 @@
+/* --- ESTILO NUEVO AÑADIDO AL INICIO --- */
+/* Este es el wrapper <Link> */
+.cardLink {
+    text-decoration: none; /* Quita el subrayado del link */
+    color: inherit; /* Hereda el color del texto */
+    display: block; /* Hace que el link ocupe el espacio */
+}
+
+/* --- MODIFICACIÓN AQUÍ --- */
 .card {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -8,6 +17,13 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 120px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición para hover */
+}
+
+/* --- ESTILO NUEVO AÑADIDO --- */
+.card:hover {
+    transform: translateY(-4px); /* Se eleva un poco */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07); /* Sombra más pronunciada */
 }
 
 .title {
@@ -69,7 +85,6 @@
     transition: width 0.4s ease;
 }
 
-/* --- ESTILO NUEVO AÑADIDO AQUÍ --- */
 /* Estilo para el texto "Bajo", "Medio", "Alto" */
 .subText {
     font-size: 1rem;

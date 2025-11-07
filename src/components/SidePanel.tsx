@@ -9,13 +9,13 @@ interface Props {
 }
 
 export default function SidePanel({ isOpen, onClose, onLogout }: Props) {
-    // Agrega la clase 'open' solo si isOpen es true
+    // Clases CSS dinámicas (sin cambios)
     const panelClasses = `${styles.panel} ${isOpen ? styles.open : ''}`;
     const overlayClasses = `${styles.overlay} ${isOpen ? styles.open : ''}`;
 
     return (
         <>
-            {/* El fondo oscuro que al clickearlo cierra el panel */}
+            {/* El fondo oscuro (sin cambios) */}
             <div className={overlayClasses} onClick={onClose} />
 
             {/* El panel en sí */}
@@ -25,15 +25,16 @@ export default function SidePanel({ isOpen, onClose, onLogout }: Props) {
                     <button onClick={onClose} className={styles.closeButton}>×</button>
                 </div>
 
+                {/* --- MODIFICACIÓN AQUÍ --- */}
                 <nav className={styles.navLinks}>
-                    <Link href="/dashboard" onClick={onClose}>Mi Salud</Link>
+                    <Link href="/dashboard/salud" onClick={onClose}>Centro de Salud</Link>
                     <Link href="/dashboard/perfil" onClick={onClose}>Mi Perfil</Link>
                     <Link href="/dashboard/configuracion" onClick={onClose}>Configuración</Link>
                     {/* Puedes añadir más links aquí */}
                 </nav>
 
                 <div className={styles.footer}>
-                    {/* El botón de cerrar sesión, ahora al final */}
+                    {/* El botón de cerrar sesión (sin cambios) */}
                     <button onClick={onLogout} className={styles.logoutButton}>
                         Cerrar Sesión
                     </button>

@@ -1,16 +1,17 @@
 'use client';
 import styles from './IndicatorCard.module.css';
+import Link from 'next/link'; // 1. IMPORTAR LINK
 
 interface Props {
     title: string;
     value: number | null;
     type: 'risk' | 'progress';
+    href: string; // 2. AÑADIR LA PROP 'href' A LA INTERFAZ
 }
 
-export default function IndicatorCard({ title, value, type }: Props) {
+export default function IndicatorCard({ title, value, type, href }: Props) {
 
-    // --- CAMBIO AQUÍ ---
-    // Esta función ahora devuelve un objeto con el texto y la clase
+    // Función para obtener texto y clase (sin cambios)
     const getRiskInfo = (riskValue: number) => {
         // **Ajusta estos rangos (15 y 30) según tu lógica médica**
         if (riskValue < 15) {
@@ -22,30 +23,21 @@ export default function IndicatorCard({ title, value, type }: Props) {
         return { text: 'Alto', className: styles.riskAlto };
     };
 
-    // Función para mostrar el valor
+    // Función para renderizar el valor (sin cambios)
     const renderValue = () => {
-        // Si el valor es null, muestra N/A
         if (value === null || value === undefined) {
             return <span className={styles.valueNA}>N/A</span>;
         }
 
-        // Lógica para 'risk'
         if (type === 'risk') {
             const riskValue = value as number;
-            // Obtenemos el objeto completo (texto + clase)
             const riskInfo = getRiskInfo(riskValue);
 
             return (
-                // Usamos un <div> para agrupar el número y el texto
                 <div>
           <span className={`${styles.value} ${riskInfo.className}`}>
-            {/* Mostramos el valor con un decimal y el símbolo % */}
-              {riskValue.toFixed(1)}%
+            {riskValue.toFixed(1)}%
           </span>
-
-                    {/* --- TEXTO ADICIONAL AÑADIDO --- */}
-                    {/* Mostramos el texto (Bajo, Medio, Alto) */}
-                    {/* Usamos la MISMA clase para que tenga el MISMO color */}
                     <p className={`${styles.subText} ${riskInfo.className}`}>
                         {riskInfo.text}
                     </p>
@@ -53,7 +45,6 @@ export default function IndicatorCard({ title, value, type }: Props) {
             );
         }
 
-        // Lógica para 'progress' (esta se mantiene igual)
         if (type === 'progress') {
             const progressValue = value as number;
             return (
@@ -72,10 +63,13 @@ export default function IndicatorCard({ title, value, type }: Props) {
         }
     };
 
+    // 3. ENVOLVER TODA LA LÓGICA EN EL COMPONENTE <Link>
     return (
-        <div className={styles.card}>
-            <h4 className={styles.title}>{title}</h4>
-            {renderValue()}
-        </div>
+        <Link href={href} className={styles.cardLink}>
+            <div className={styles.card}>
+                <h4 className={styles.title}>{title}</h4>
+                {renderValue()}
+            </div>
+        </Link>
     );
 }
