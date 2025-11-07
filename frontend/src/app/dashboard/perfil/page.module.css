@@ -1,7 +1,7 @@
 .backButton {
     background: none;
     border: none;
-    color: #16A34A; /* <-- CAMBIO A VERDE */
+    color: #16A34A; /* Verde */
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -11,11 +11,11 @@
     padding: 0.5rem 1rem;
     border-radius: 6px;
     transition: background-color 0.2s ease;
-    margin-left: -1rem;
+    margin-left: -1rem; /* Lo alinea a la izquierda */
 }
 
 .backButton:hover {
-    background-color: #EBFDF3; /* <-- CAMBIO A VERDE */
+    background-color: #EBFDF3; /* Verde claro */
 }
 
 .header {
@@ -33,59 +33,7 @@
     color: #555;
 }
 
-/* Layout interno del perfil */
-.profileBody {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 2rem;
-    align-items: flex-start;
-
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
-}
-
-.profilePicture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #16A34A; /* <-- CAMBIO A VERDE */
-    color: white;
-    display: grid;
-    place-items: center;
-    font-size: 4rem;
-    font-weight: 700;
-
-    @media (max-width: 768px) {
-        width: 120px;
-        height: 120px;
-        font-size: 3rem;
-    }
-}
-
-.profileData {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 600px;
-}
-
-.emailField {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 1.5rem;
-    background-color: #f9f9f9;
-}
-.emailField span {
-    font-size: 1rem;
-    color: #555;
-}
-.label {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #555;
-    margin-bottom: 0.25rem;
-    text-transform: uppercase;
-}
+/* Todos los estilos .profileBody, .profilePicture, .profileData, etc.
+   se eliminaron porque ya no usamos EditableField aquí.
+   El formulario trae sus propios estilos.
+*/

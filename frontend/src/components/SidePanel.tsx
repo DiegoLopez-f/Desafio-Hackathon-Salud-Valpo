@@ -29,8 +29,7 @@ export default function SidePanel({ isOpen, onClose, onLogout }: Props) {
                 <nav className={styles.navLinks}>
                     <Link href="/dashboard/salud" onClick={onClose}>Centro de Salud</Link>
                     <Link href="/dashboard/perfil" onClick={onClose}>Mi Perfil</Link>
-                    <Link href="/dashboard/configuracion" onClick={onClose}>Configuración</Link>
-                    {/* Puedes añadir más links aquí */}
+                    {/* El link de Configuración ha sido eliminado */}
                 </nav>
 
                 <div className={styles.footer}>
