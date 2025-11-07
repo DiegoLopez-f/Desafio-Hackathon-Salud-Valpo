@@ -1,11 +1,7 @@
-.profileContainer {
-    width: 100%;
-}
-
 .backButton {
     background: none;
     border: none;
-    color: #007bff;
+    color: #16A34A; /* <-- CAMBIO A VERDE */
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -15,14 +11,13 @@
     padding: 0.5rem 1rem;
     border-radius: 6px;
     transition: background-color 0.2s ease;
-    margin-left: -1rem; /* Lo alinea a la izquierda */
+    margin-left: -1rem;
 }
 
 .backButton:hover {
-    background-color: #e7f3ff;
+    background-color: #EBFDF3; /* <-- CAMBIO A VERDE */
 }
 
-/* Header de la página (título y descripción) */
 .header {
     border-bottom: 2px solid #f0f0f0;
     padding-bottom: 1rem;
@@ -38,18 +33,16 @@
     color: #555;
 }
 
-/* --- NUEVOS ESTILOS PARA EL LAYOUT --- */
-
+/* Layout interno del perfil */
 .profileBody {
     display: grid;
-    grid-template-columns: auto 1fr; /* Columna auto para la foto, 1fr para los datos */
+    grid-template-columns: auto 1fr;
     gap: 2rem;
-    align-items: flex-start; /* Alinea la foto y la caja de datos arriba */
+    align-items: flex-start;
 
-    /* En pantallas pequeñas, se apilan */
     @media (max-width: 768px) {
-        grid-template-columns: 1fr; /* Una sola columna */
-        justify-items: center; /* Centra la foto */
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
 }
 
@@ -57,7 +50,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #007bff;
+    background-color: #16A34A; /* <-- CAMBIO A VERDE */
     color: white;
     display: grid;
     place-items: center;
@@ -74,23 +67,22 @@
 .profileData {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    overflow: hidden; /* Para que los bordes redondeados se apliquen a los hijos */
+    overflow: hidden;
     width: 100%;
     max-width: 600px;
 }
 
-/* Estilo para el campo de email (que no es editable) */
 .emailField {
     display: flex;
     flex-direction: column;
     padding: 1rem 1.5rem;
-    background-color: #f9f9f9; /* Un fondo gris para indicar que no es editable */
+    background-color: #f9f9f9;
 }
 .emailField span {
     font-size: 1rem;
     color: #555;
 }
-.label { /* Re-usamos el estilo de label de EditableField */
+.label {
     font-size: 0.8rem;
     font-weight: 600;
     color: #555;

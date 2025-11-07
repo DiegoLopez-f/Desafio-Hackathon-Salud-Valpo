@@ -2,8 +2,8 @@ body {
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #F4FBF4; /* <-- CAMBIO AQUÍ */
-    color: #333; /* Color de texto por defecto */
+    background-color: #F4FBF4; /* <-- FONDO VERDE CLARO */
+    color: #333;
 }
 
 * {

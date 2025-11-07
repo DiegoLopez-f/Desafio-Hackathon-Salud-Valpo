@@ -1,16 +1,15 @@
 .card {
-    /* Un fondo degradado suave para destacarla */
-    background: linear-gradient(135deg, #e7f3ff 0%, #ffffff 100%);
-    border: 1px solid #007bff; /* Borde azul a juego */
+    background: linear-gradient(135deg, #EBFDF3 0%, #ffffff 100%); /* <-- CAMBIO A VERDE */
+    border: 1px solid #16A34A; /* <-- CAMBIO A VERDE */
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.1); /* <-- CAMBIO A VERDE */
 }
 
 .title {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #0056b3; /* Un azul más oscuro */
+    color: #15803D; /* <-- CAMBIO A VERDE */
     margin: 0 0 1rem 0;
 }
 

@@ -15,11 +15,14 @@
     box-sizing: border-box;
 }
 
+/* --- CORRECCIÓN AQUÍ --- */
+/* Volvemos a poner el h2 anidado */
 .loginContainer h2 {
     text-align: center;
     color: #333;
     margin-top: 0;
 }
+/* ------------------------- */
 
 .inputGroup {
     margin-bottom: 1.5rem;
@@ -46,20 +49,20 @@
     padding: 0.85rem;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #16A34A; /* Verde */
     color: white;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 .loginButton:hover {
-    background-color: #0056b3;
+    background-color: #15803D; /* Verde oscuro */
 }
 
 .loginButton:disabled {
-    background-color: #a0cffc;
+    background-color: #D1FAE5; /* Verde claro */
     cursor: not-allowed;
 }
 
@@ -74,7 +77,6 @@
     margin-top: 1rem;
 }
 
-/* Estilo para el link de "No tienes cuenta?" */
 .registerLink {
     text-align: center;
     margin-top: 1.5rem;
@@ -83,7 +85,7 @@
 }
 
 .registerLink a {
-    color: #28a745; /* Verde, igual que el botón de registro */
+    color: #16A34A; /* Verde */
     text-decoration: none;
     font-weight: 600;
 }

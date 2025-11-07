@@ -1,4 +1,4 @@
-'use client'; // Este layout DEBE ser un componente de cliente
+'use client';
 
 import { useEffect, useState, ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
@@ -6,8 +6,7 @@ import { useAuth } from '@/context/AuthContext';
 import { signOut } from 'firebase/auth';
 import { auth } from '@/firebase/client';
 import SidePanel from '@/components/SidePanel';
-// Importamos los estilos de la página principal del dashboard
-import styles from './page.module.css';
+import styles from './page.module.css'; // Usa los estilos de la página principal
 
 export default function DashboardLayout({
                                             children,
@@ -17,17 +16,14 @@ export default function DashboardLayout({
     const { user, loading } = useAuth();
     const router = useRouter();
 
-    // Estado para el panel
     const [isPanelOpen, setIsPanelOpen] = useState(false);
 
-    // Lógica de protección
     useEffect(() => {
         if (!loading && !user) {
             router.push('/');
         }
     }, [user, loading, router]);
 
-    // Lógica de Logout
     const handleLogout = async () => {
         try {
             await signOut(auth);
@@ -36,9 +32,7 @@ export default function DashboardLayout({
         }
     };
 
-    // Vistas de carga/protección
     if (loading) {
-        // Usamos el 'loading' del dashboard para la carga
         return <p className={styles.loading}>Cargando...</p>;
     }
     if (!user) {
@@ -47,13 +41,11 @@ export default function DashboardLayout({
 
     const profileInitial = user?.nombre ? user.nombre[0].toUpperCase() : '?';
 
-    // --- Renderizado del Layout ---
     return (
         <>
-            {/* Fondo gris y contenedor principal */}
+            {/* El <main> solo da el fondo gris */}
             <main className={styles.dashboardContainer}>
 
-                {/* Barra de Navegación */}
                 <nav className={styles.navbar}>
                     <h1>
                         ¡Bienvenido, {user.nombre ? user.nombre : 'Estimado(a)'}!
@@ -66,17 +58,13 @@ export default function DashboardLayout({
                     </button>
                 </nav>
 
-                {/* ESTA ES LA CLAVE:
-          El contenedor blanco (styles.content) VIVE EN EL LAYOUT
-          y envuelve a todas las páginas hijas.
-        */}
+                {/* El contenedor blanco. Envuelve a TODAS las páginas hijas. */}
                 <div className={styles.content}>
                     {children}
                 </div>
 
             </main>
 
-            {/* Panel Lateral */}
             <SidePanel
                 isOpen={isPanelOpen}
                 onClose={() => setIsPanelOpen(false)}

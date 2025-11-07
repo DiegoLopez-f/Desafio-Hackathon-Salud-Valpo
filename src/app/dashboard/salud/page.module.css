@@ -1,11 +1,7 @@
-/* ELIMINAMOS .loading (lo maneja el layout) */
-
-/* ELIMINAMOS .detailContainer (lo maneja el layout) */
-
 .backButton {
     background: none;
     border: none;
-    color: #007bff;
+    color: #16A34A; /* <-- CAMBIO A VERDE */
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -15,16 +11,14 @@
     padding: 0.5rem 1rem;
     border-radius: 6px;
     transition: background-color 0.2s ease;
-    margin-left: -1rem; /* Lo dejamos para que se alinee a la izquierda */
+    margin-left: -1rem;
 }
 
 .backButton:hover {
-    background-color: #e7f3ff;
+    background-color: #EBFDF3; /* <-- CAMBIO A VERDE */
 }
 
-/* Header de la página (título y descripción) */
 .header {
-    /* Ya no es una caja blanca, es solo un título */
     background-color: transparent;
     padding: 0;
     box-shadow: none;
@@ -41,5 +35,3 @@
     font-size: 1.1rem;
     color: #555;
 }
-
-/* ELIMINAMOS .content (lo maneja el layout) */
