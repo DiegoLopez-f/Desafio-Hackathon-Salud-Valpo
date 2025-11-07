@@ -1,0 +1,11 @@
+# FastAPI básico
+fastapi==0.121.0
+uvicorn==0.38.0
+
+# Machine Learning básico
+numpy==2.3.4
+scikit-learn==1.7.2
+joblib==1.5.2
+
+# Si usas pandas para preprocesar
+# pandas==2.0.3
