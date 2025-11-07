@@ -1,0 +1,95 @@
+.mainContainer {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.loginContainer {
+    background-color: #ffffff;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+/* --- CORRECCIÓN AQUÍ --- */
+/* Volvemos a poner el h2 anidado */
+.loginContainer h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+}
+/* ------------------------- */
+
+.inputGroup {
+    margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #16A34A; /* Verde */
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.loginButton:hover {
+    background-color: #15803D; /* Verde oscuro */
+}
+
+.loginButton:disabled {
+    background-color: #D1FAE5; /* Verde claro */
+    cursor: not-allowed;
+}
+
+.errorText {
+    color: #D8000C;
+    background-color: #FFD2D2;
+    border: 1px solid #D8000C;
+    border-radius: 5px;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.registerLink {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.registerLink a {
+    color: #16A34A; /* Verde */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registerLink a:hover {
+    text-decoration: underline;
+}

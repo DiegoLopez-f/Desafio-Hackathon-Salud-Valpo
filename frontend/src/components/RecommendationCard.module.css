@@ -1,0 +1,21 @@
+.card {
+    background: linear-gradient(135deg, #EBFDF3 0%, #ffffff 100%); /* <-- CAMBIO A VERDE */
+    border: 1px solid #16A34A; /* <-- CAMBIO A VERDE */
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.1); /* <-- CAMBIO A VERDE */
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #15803D; /* <-- CAMBIO A VERDE */
+    margin: 0 0 1rem 0;
+}
+
+.text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
