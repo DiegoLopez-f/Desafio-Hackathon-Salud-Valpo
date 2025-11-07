@@ -1,0 +1,22 @@
+.card {
+    /* Un fondo degradado suave para destacarla */
+    background: linear-gradient(135deg, #e7f3ff 0%, #ffffff 100%);
+    border: 1px solid #007bff; /* Borde azul a juego */
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0056b3; /* Un azul más oscuro */
+    margin: 0 0 1rem 0;
+}
+
+.text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
